@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invista na Flórida | Construção de Casas</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f8f9fa;
+      color: #212529;
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ffccda, #ffe3ec);
+      padding: 4rem 1rem 2rem;
+      text-align: center;
+    }
+    .hero img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .section {
+      padding: 3rem 1rem;
+      max-width: 960px;
+      margin: auto;
+      text-align: center;
+    }
+    h1, h2 {
+      color: #d6336c;
+    }
+    h1 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.125rem;
+      line-height: 1.8;
+      color: #495057;
+    }
+    .section img {
+      width: 100%;
+      max-width: 900px;
+      margin-top: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .form-section {
+      background: #ffffff;
+      padding: 3rem 1rem;
+      border-radius: 16px;
+      margin-top: 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    input, button {
+      padding: 1rem;
+      margin: 0.5rem 0;
+      width: 100%;
+      max-width: 420px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ced4da;
+      box-sizing: border-box;
+    }
+    input:focus {
+      outline: none;
+      border-color: #d6336c;
+      box-shadow: 0 0 0 0.2rem rgba(214, 51, 108, 0.25);
+    }
+    button {
+      background-color: #d6336c;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #b02a57;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <img src="1.jpg" alt="Invista no seu patrimônio">
+  </div>
+
+  <div class="section">
+    <h1>Construa sua liberdade financeira na Flórida</h1>
+    <p>Invista em construção de casas em Port Charlotte — uma das regiões com maior crescimento e valorização da Flórida. Dolarize seu patrimônio com segurança, solidez e potencial de alta rentabilidade.</p>
+    <img src="2.jpg" alt="Construção na Flórida">
+  </div>
+
+  <div class="section">
+    <h2>Por que investir com a gente?</h2>
+    <p>✔️ Apoio completo no processo de construção<br>
+       ✔️ Consultoria personalizada<br>
+       ✔️ Segurança jurídica e transparência<br>
+       ✔️ Oportunidade de valorização e geração de renda em dólar</p>
+    <img src="3.jpg" alt="Investimento sólido">
+  </div>
+
+  <div class="section form-section">
+    <h2>Fale com um especialista</h2>
+    <form onsubmit="enviarParaWhatsapp(event)">
+      <input type="text" id="nome" placeholder="Seu nome" required><br>
+      <input type="tel" id="telefone" placeholder="Telefone com DDD" required><br>
+      <input type="email" id="email" placeholder="Seu e-mail" required><br>
+      <button type="submit">Quero saber mais via WhatsApp</button>
+    </form>
+  </div>
+
+  <script>
+    function enviarParaWhatsapp(event) {
+      event.preventDefault();
+      const nome = document.getElementById('nome').value;
+      const telefone = document.getElementById('telefone').value;
+      const email = document.getElementById('email').value;
+
+      const mensagem = `Olá, meu nome é ${nome}. Tenho interesse em investir em construção na Flórida. Meu telefone é ${telefone} e meu e-mail é ${email}.`;
+
+      const url = `https://wa.me/5521969198117?text=${encodeURIComponent(mensagem)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>
